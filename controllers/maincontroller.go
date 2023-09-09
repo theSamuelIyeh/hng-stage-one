@@ -20,7 +20,7 @@ func MainController(c *fiber.Ctx) error {
 	data := response{
 		SlackName:     c.Query("slack_name"),
 		CurrentDay:    time.Now().Format("Monday"),
-		UtcTime:       time.Now().UTC().Truncate(time.Second * 120),
+		UtcTime:       time.Now().UTC().Truncate(time.Second),
 		Track:         c.Query("track"),
 		GithubUrl:     "https://github.com/theSamuelIyeh/hng-stage-one/blob/main/hng-stage-1",
 		GithubRepoUrl: "https://github.com/theSamuelIyeh/hng-stage-one.git",
