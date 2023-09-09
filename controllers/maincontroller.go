@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// response struct
 type response struct {
 	SlackName     string    `json:"slack_name"`
 	CurrentDay    string    `json:"current_day"`
@@ -25,5 +26,5 @@ func MainController(c *fiber.Ctx) error {
 		GithubRepoUrl: "https://github.com/theSamuelIyeh/hng-stage-one.git",
 		StatusCode:    200,
 	}
-	return c.JSON(data)
+	return c.Status(fiber.StatusOK).JSON(data)
 }
