@@ -21,8 +21,8 @@ func MainController(c *fiber.Ctx) error {
 		CurrentDay:    time.Now().Format("Monday"),
 		UtcTime:       time.Now().UTC().Round(time.Second * 120),
 		Track:         c.Query("track"),
-		GithubUrl:     "",
-		GithubRepoUrl: "",
+		GithubUrl:     "https://github.com/theSamuelIyeh/hng-stage-one/blob/main/hng-stage-1",
+		GithubRepoUrl: "https://github.com/theSamuelIyeh/hng-stage-one.git",
 		StatusCode:    200,
 	}
 	return c.JSON(data)
